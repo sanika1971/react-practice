@@ -1,10 +1,10 @@
 import React from "react";
 
-function Navbar() {
+ function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">Sanika</a>
+        <a className="navbar-brand" href="#">{props.title}</a>
         <button
           className="navbar-toggler"
           type="button"
@@ -21,7 +21,7 @@ function Navbar() {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="/">
-                Home
+            {props.aboutText}
               </a>
             </li>
             <li className="nav-item">
