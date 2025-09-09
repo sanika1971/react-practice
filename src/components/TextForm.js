@@ -6,6 +6,13 @@ export default function TextForm(props) {
     let newText = text.toUpperCase();
     setText(newText)
   }
+
+  const handleLoClick = ()=>{
+    // console.log("Lowercase was clicked" + text);
+    let newText = text.toLowerCase();
+    setText(newText)
+  }
+
     const handleOnChange = (event)=>{
     // console.log("On change");
     setText(event.target.value);
@@ -21,10 +28,14 @@ export default function TextForm(props) {
       <textarea className="form-control" value={text} onChange={handleOnChange} id="mybox" rows="8"></textarea>
 </div>
   <button className="btn btn-primary" onClick={handleUpClick}>convert to Uppercase</button>
+    <button className="btn btn-primary" onClick={handleLoClick}>convert to Lowercase</button>
     </div>
     <div className="container my-3" >
       <h1>Your text summry</h1>
-      <p>3432 words and 4532324 characters</p>
+      <p>{text.split("").length}words and {text.length} characters</p>
+      <p>{0.008 * text.split("").length} Minutes read</p>
+      <h2>Preview</h2>
+      <p>{text}</p>
 
     </div>
     </>
