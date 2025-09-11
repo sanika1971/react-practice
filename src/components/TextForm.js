@@ -42,8 +42,8 @@ export default function TextForm(props) {
   <button className="btn btn-primary mx-1" onClick={handleUpClick}>convert to Uppercase</button>
     <button className="btn btn-primary mx-1" onClick={handleLoClick}>convert to Lowercase</button>
     <button className="btn btn-primary mx-1" onClick={handleclearClick}>clear Text</button>
-     <button className="btn btn-primary mx-1" onClick={handleTitleCaseClick}>Title Case</button>
-     <button className="btn btn-primary mx-1" onClick={handleReverseCaseClick}>Reverse Case</button>
+     <button className="btn btn-primary mx-1 my-3" onClick={handleTitleCaseClick}>Title Case</button>
+     <button className="btn btn-primary mx-1 my-3" onClick={handleReverseCaseClick}>Reverse Case</button>
 
     </div>
     <div className="container my-3" >
