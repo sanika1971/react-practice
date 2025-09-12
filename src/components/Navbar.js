@@ -2,7 +2,7 @@ import React from "react";
 
  function Navbar(props) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
       <div className="container-fluid">
         <a className="navbar-brand" href="#">{props.title}</a>
         <button
@@ -35,6 +35,10 @@ import React from "react";
               </a>
             </li>
           </ul>
+             <div className={`form-check form-switch text-${props.mode}`}>
+              <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="switchCheckDefault"/>
+              <label className="form-check-label" htmlfor="switchCheckDefault"> Enable Dark Mode</label>
+</div>
         </div>
       </div>
     </nav>
