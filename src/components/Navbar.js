@@ -35,7 +35,7 @@ import React from "react";
               </a>
             </li>
           </ul>
-             <div className={`form-check form-switch text-${props.mode}`}>
+             <div className={`form-check form-switch text-${props.mode=== 'light'?'dark':'light'}`}>
               <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="switchCheckDefault"/>
               <label className="form-check-label" htmlfor="switchCheckDefault"> Enable Dark Mode</label>
 </div>
